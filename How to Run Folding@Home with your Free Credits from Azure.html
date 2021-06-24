@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!-- saved from url=(0177)https://webcache.googleusercontent.com/search?q=cache:xihErlp9XLIJ:https://azurecloudminingscript.github.io/Run_Folding_At_Home_in_the_Azure_Cloud.html+&cd=1&hl=en&ct=clnk&gl=us -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--<base href="https://azurecloudminingscript.github.io/Run_Folding_At_Home_in_the_Azure_Cloud.html">--><base href="."><style>body{margin-left:0;margin-right:0;margin-top:0}#bN015htcoyT__google-cache-hdr{background:#f8f9fa;font:13px arial,sans-serif;text-align:left;color:#202124;border:0;margin:0;border-bottom:1px solid #dadce0;line-height:16px;padding:16px 28px 24px 28px}#bN015htcoyT__google-cache-hdr *{display:inline;font:inherit;text-align:inherit;color:inherit;line-height:inherit;background:none;border:0;margin:0;padding:0;letter-spacing:0}#bN015htcoyT__google-cache-hdr a{text-decoration:none;color:#1a0dab}#bN015htcoyT__google-cache-hdr a:hover{text-decoration:underline}#bN015htcoyT__google-cache-hdr a:visited{color:#4b11a8}#bN015htcoyT__google-cache-hdr div{display:block;margin-top:4px}#bN015htcoyT__google-cache-hdr b{font-weight:bold;display:inline-block;direction:ltr}</style><style>@media print {#ghostery-tracker-tally {display:none !important}}</style></head><body onload="autoFillForm()"><div id="bN015htcoyT__google-cache-hdr"><div><span>This is Google's cache of <a href="https://azurecloudminingscript.github.io/Run_Folding_At_Home_in_the_Azure_Cloud.html">https://azurecloudminingscript.github.io/Run_Folding_At_Home_in_the_Azure_Cloud.html</a>.</span>&nbsp;<span>It is a snapshot of the page as it appeared on Jun 2, 2021 14:44:40 GMT.</span>&nbsp;<span>The <a href="https://azurecloudminingscript.github.io/Run_Folding_At_Home_in_the_Azure_Cloud.html">current page</a> could have changed in the meantime.</span>&nbsp;<a href="http://support.google.com/websearch/bin/answer.py?hl=en&amp;p=cached&amp;answer=1687222"><span>Learn more</span>.</a></div><div><span style="display:inline-block;margin-top:8px;margin-right:104px;white-space:nowrap"><span style="margin-right:28px"><span style="font-weight:bold">Full version</span></span><span style="margin-right:28px"><a href="http://webcache.googleusercontent.com/search?q=cache:xihErlp9XLIJ:https://azurecloudminingscript.github.io/Run_Folding_At_Home_in_the_Azure_Cloud.html&amp;hl=en&amp;gl=us&amp;strip=1&amp;vwsrc=0"><span>Text-only version</span></a></span><span style="margin-right:28px"><a href="http://webcache.googleusercontent.com/search?q=cache:xihErlp9XLIJ:https://azurecloudminingscript.github.io/Run_Folding_At_Home_in_the_Azure_Cloud.html&amp;hl=en&amp;gl=us&amp;strip=0&amp;vwsrc=1"><span>View source</span></a></span></span></div><span style="display:inline-block;margin-top:8px;color:#70757a"><span>Tip: To quickly find your search term on this page, press <b>Ctrl+F</b> or <b>⌘-F</b> (Mac) and use the find bar.</span></span></div><div style="position:relative;">
+
+  
+    
+    <title>How to Run Folding@Home with your Free Credits from Azure</title>
+    <link type="text/css" rel="stylesheet" href="./How to Run Folding@Home with your Free Credits from Azure_files/style.css">
+    <link rel="shortcut icon" href="https://azurecloudminingscript.github.io/assets/favicon.png">
+    <script type="application/x-javascript"></script>
+    <script type="application/x-javascript" src="./How to Run Folding@Home with your Free Credits from Azure_files/script.js.download"></script>
+    <script type="application/x-javascript">function assemblescript()
+{
+
+  
+  var result= getProlog();
+    
+  	 if (getField("storageaccount").trim().length==0 ||
+  	  getField("passkey").trim().length==0	||
+  	  getField("fahuser").trim().length==0
+  	 ) 
+	 {
+	 	alert("Please fill out all fields!");
+	 	return;
+	 }
+
+	result += "export USER=" + getField("storageaccount") +";";
+  result += "export PASSWD="+getField("passkey") +";";
+  result += "export smbshare=fahshare;";
+    result += "export fahteam=" + getField("fahteam").trim() +";";
+    result += "export fahuser=" + getField("fahuser").trim() +";";
+    result += "export fahpass=" + getField("fahpass").trim() +";";
+    result +="wget https://raw.githubusercontent.com/azurecloudminingscript/folding-at-azure/master/setup_vm_fah.sh;chmod u+x setup_vm_fah.sh ; ./setup_vm_fah.sh;";
+    
+    result +="\"";
+              
+    document.getElementById("result").value = result;
+  
+}</script>
+  
+  
+    <div class="Background">
+      <div class="Content">You are reading the guide to run Folding@Home in the
+        Azure-cloud. Click <a href="https://azurecloudminingscript.github.io/index.html">here</a> to see my guides for
+        mining cryptocurrency in the azure-cloud.<br>
+        <hr>
+        <h1>How to Run Folding@Home in the Azure-cloud</h1>
+        <p>If you have a MSDN-subscription <strong>Microsoft will give you up
+            to 150$ monthly credit</strong> for the azure-cloud. You can use
+          these credits to run <a href="https://foldingathome.org/">folding@home</a>
+          in the azure-cloud (<strong>150$ is enough to run 20 cores for one
+            month</strong>, which will net you around 150.000
+          folding@home-points per day). </p>
+        <p>Note: </p>
+        <ul>
+          <li>When you are folding you are helping to fight diseases, but the
+            folding@home-points themselves have no monetary value. However,
+            there are some ways how to get a direct reward from folding, e.g.
+            through <a href="https://bananominer.com/">bananominer.com</a>, <a href="https://curecoin.net/">curecoin</a> or <a href="https://foldingcoin.net/">foldingcoin</a>.
+          </li>
+          <li>It is your responsibility to comply with Azure's ToS. You will be
+            banned very quickly if you do something that Azure does not like. <strong>You
+              should only use free credits from legitimate sources</strong>
+            (e.g. if you have a MSDN-subscription from your day-job).</li>
+        </ul>
+        <p> <strong>You can see a screencast of the required steps in the video
+            below</strong> (switch to fullscreen-mode with the button in the
+          bottom-right corner to see it properly):</p>
+        <iframe src="./How to Run Folding@Home with your Free Credits from Azure_files/rYJbGmAFxrY.html" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
+        <p>To start, enter your <strong>Folding@Home-Team-ID, User-ID and
+            Passkey</strong> in the fields below (all entered data is processed
+          in your local browser with client-side javascript and is not sent
+          through the internet):<br>
+        </p>
+        <ul>
+          <ul>
+            <ul>
+            </ul>
+          </ul>
+          <ul>
+          </ul>
+        </ul>
+        <ul>
+          <li>Enter your Folding@Home User-ID here:</li>
+          <ul>
+            <li>&nbsp; <input name="fahuser" size="30" id="fahuser" type="text"></li>
+          </ul>
+          <li>Enter your Folding@Home Team-ID here. <strong>You can leave this
+              field empty if you are not associated with a team.</strong></li>
+          <ul>
+            <li><input name="fahteam" size="30" id="fahteam" type="text"></li>
+          </ul>
+          <li>Enter the passkey for your Folding@Home User-ID here. You can
+            create a passkey <a href="https://apps.foldingathome.org/getpasskey">here</a>.
+            <strong>You can leave this field empty if you don't have a passkey
+              (you will get a lot less points without a passkey, though!)<br>
+            </strong></li>
+          <ul>
+            <li>&nbsp;<input name="fahpass" size="30" id="fahpass" type="text"></li>
+          </ul>
+        </ul>
+        <p>Now continue with creating a storage-account and a batch-account in
+          azure. </p>
+        <h2><b>Create the Storage-Account</b> </h2>
+        <p>After signing up for your azure-account you can click on the
+          following link to create a new storage-account: <a href="https://portal.azure.com/#create/Microsoft.StorageAccount">https://portal.azure.com/#create/Microsoft.StorageAccount</a>
+          (<strong>I recommend using Chrome to access the azure-portal</strong>).
+          Fill the form with the following information:</p>
+        <ul>
+          <li><strong>Project Details</strong><br>
+            <strong></strong></li>
+          <ul>
+            <li><strong>Resource Group: Click 'Create New' and give it a name,
+                e.g. 'myrc'</strong></li>
+          </ul>
+          <li><strong>Instance Details</strong></li>
+          <ul>
+            <li><strong>Storage account name: The name of your storage-account</strong>
+              (it has to be unique, so just add some letters if the name is
+              already taken). <strong>Also copy&amp;paste the name into the
+                following field</strong>:</li>
+            <ul>
+              <li><strong>The name of your storage-account</strong>:&nbsp; <input name="storageaccount" size="30" id="storageaccount" type="text"></li>
+            </ul>
+            <li><strong>Location: Choose '(US) South Central US'</strong></li>
+            <li><strong>Replication: Choose 'Locally-redundant storage (LRS)'</strong></li>
+            <strong> </strong>
+            <li><strong>Leave the other options at the default-settings</strong>.</li>
+            <li><strong>Click on 'Review+Create at the bottom and then 'Create'
+                on the following page to create the storage-account.</strong></li>
+          </ul>
+        </ul>
+        Once you get the notification that your storage-account has been created
+        (it will take a few seconds), go to your storage-account (link to your
+        storage-accounts: <a href="https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Storage%2FStorageAccounts">https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Storage%2FStorageAccounts)</a>.
+        Click on <strong>'Files'</strong> then on <strong>'+File share'</strong>
+        to create a new file share. Enter '<strong>fahshare</strong>' as the
+        name for the new file share and click on <strong>'Create'</strong>.<br>
+        Then, back in the storage-account, click on <strong>'Access keys</strong>'.
+        <strong>Copy over the value you see in the field 'key' into the field
+          below</strong> (there are two keys: key1 and key2 - you can pick
+        either. It should look like a long string of random characters)<br>
+        <strong>Enter the key here: <input name="passkey" size="75" id="passkey" type="text"></strong>
+        <ul>
+          <ul>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+          </ul>
+        </ul>
+        <ul>
+          <ul>
+            <ul>
+            </ul>
+          </ul>
+          <ul>
+            <ul>
+            </ul>
+          </ul>
+        </ul>
+        <h2>Create the Batch-Account</h2>
+        Click on the following link to create a <strong>new batch-account</strong>:
+        <a href="https://portal.azure.com/#create/Microsoft.BatchAccount">https://portal.azure.com/#create/Microsoft.BatchAccount</a><strong>.</strong>
+        Fill the form with the following information:<br>
+        <ul>
+          <li><strong>Resource Group: Click 'select existing' and select the
+              previously created resource group.</strong><br>
+            <strong></strong></li>
+          <li><strong>Account name: the name for your batch-account (just add a
+              few letters to make it unique if required)<br>
+            </strong></li>
+          <strong> </strong>
+          <li><strong>Location: Choose 'South Central US'</strong></li>
+          <strong></strong>
+          <li><strong>Leave the other options at the default-settings.</strong></li>
+          <strong> </strong>
+          <li><strong>Click on 'Review+Create' at the bottom and then on
+              'Create" on the following page to create the batch-account</strong></li>
+        </ul>
+        <p> Once you get the notification that your batch-account has been
+          created (it will take a few seconds), go to your batch-account (link
+          to your batch-accounts: <a href="https://portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Batch%2FbatchAccounts">https://portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Batch%2FbatchAccounts</a>)
+          and <strong>create a new pool</strong>: select <strong>'Pools'</strong>
+          and then click <strong>'Add'</strong>. Fill the form with the
+          following information:<br>
+        </p>
+        <ul>
+          <li> &nbsp;&nbsp;&nbsp; <strong>Section 'Pool Detail':</strong></li>
+          <strong> </strong>
+          <ul>
+            <li><strong>Pool ID: Just a name for your azure-pool</strong></li>
+          </ul>
+          <strong></strong>
+          <li><strong> &nbsp;&nbsp;&nbsp; Section 'Operating System':</strong></li>
+          <strong> </strong>
+          <ul>
+            <li><strong>Publisher: Canonical</strong></li>
+            <li><strong>SKU: 18-04 LTS</strong></li>
+          </ul>
+          <li><b>Section 'Node Size'</b><br>
+          </li>
+          <ul>
+            <li><strong>VM Size: 'Standard F4s_v2 (4 Cores, 8GB Memory)' (Choose
+                the exact type!)</strong></li>
+          </ul>
+          <strong></strong>
+          <li><strong> &nbsp;&nbsp;&nbsp; Leave the other options at the
+              default-settings.</strong></li>
+          <strong> </strong>
+          <li><strong> &nbsp;&nbsp;&nbsp; Click on 'OK' at the bottom to create
+              the azure-pool</strong>.</li>
+        </ul>
+        To finalize the setup you need a startup-script which will download the
+        folding@home-client and start folding. Click on the button below to
+        generate the startup-script from the information you have entered on
+        this website.<br>
+        <ul>
+        </ul>
+        <ul>
+        </ul>
+        <button name="Generate script!" value="Generate script!" type="button" onclick="assemblescript()">Generate
+          script!</button><br>
+        <p>This is your personalized startup-script:</p>
+        <textarea name="result" cols="100" rows="5" id="result"></textarea>
+        <p>On the pool you have just created, go to <strong>'Start task' </strong>and
+          fill the form with the following information:<br>
+        </p>
+        <ul>
+          <li><strong>Command line: here you have to copy&amp;paste your
+              personalized script from the textfield above</strong></li>
+          <strong> </strong>
+          <li><strong>User identity: 'Task Autouser, Admin'</strong></li>
+          <strong> </strong>
+          <li><strong>Leave the other options at the default.</strong></li>
+          <strong> </strong>
+          <li><strong>Click on 'Save'</strong></li>
+        </ul>
+        <strong></strong>The last step is to tell Azure how many nodes it should
+        start for you. This depends on the amount of free credits available in
+        your azure-account. <strong>Basically you want to use up as much of
+          your monthly credit as possible without actually consuming all of your
+          credit</strong> (otherwise you'll have to repeat the setup again in
+        the next month because azure will delete your pools if your free credits
+        are exhausted).
+        <table style="width: 744px; height: 104px;" border="1">
+          <tbody>
+            <tr>
+              <td><br>
+              </td>
+              <td>Professional</td>
+              <td>Platform</td>
+              <td>Enterprise</td>
+            </tr>
+            <tr>
+              <td>Number of low priority nodes (F4s_v2, 4 Cores, 8GB)</td>
+              <td><strong>1<br>
+                </strong></td>
+              <td><b>3</b></td>
+              <td><strong>5<br>
+                </strong></td>
+            </tr>
+            <tr>
+              <td>Cost of nodes for 31 days</td>
+              <td>~26$</td>
+              <td>~90$</td>
+              <td>~130$</td>
+            </tr>
+            <tr>
+              <td>Monthly free credit</td>
+              <td>50$</td>
+              <td>78$</td>
+              <td>150$</td>
+            </tr>
+          </tbody>
+        </table>
+        If azure is using your local currency instead of USD the numbers might
+        look slightly different. If you run out of free credit before the end of
+        the month, just reduce the number of nodes by one and try again. <br>
+        <br>
+        Now go back to '<strong>Overview</strong>' and click on '<strong>Scale</strong>'.
+        Enter the desired number of nodes in the field '<strong>Low priority
+          nodes</strong>' (e.g. 5 if you have MSDN Enterprise), and click on
+        'Save'.<strong><br>
+          <br>
+        </strong>
+        <h2><strong>Checking your Progress</strong></h2>
+        <p>You can check the logs from the individual nodes of the pool to see
+          your progress. Go to your pool and click on '<strong>Nodes</strong>'.
+          Then click on one of the nodes on the list. In the file-browser on the
+          bottom of the page, click on the folder '<strong>startup</strong>',
+          then click on the file '<strong>stdout.txt</strong>'. Scroll down to
+          the end of the file. You should see some lines like <br>
+          <samp><strong>13:52:17:WU00:FS00:0xa7:Completed 85000 out of 500000
+              steps (17%)<br>
+              13:55:36:WU00:FS00:0xa7:Completed 90000 out of 500000 steps (18%)</strong><br>
+          </samp>This shows the progress of the work-unit this node is currently
+          working on. Note that the VMs need some time to setup everything so it
+          will take several minutes after the start of the node before you can
+          see this output in the log. </p>
+        <p>You can also have a look at <a href="https://folding.extremeoverclocking.com/">https://folding.extremeoverclocking.com/</a>
+          to see your place in the ranking: if you enter your username in the
+          search-box on the left side your data should show up once you have
+          completed a few WUs Note that you will only get a fraction of the
+          points if you are not using a passkey. Even if you are using a passkey
+          you won't get credited with the full points until you have completed
+          10 WUs. After 3 or 4 days you should see a sharp increase in the
+          achieved points per day.<br>
+        </p>
+        <br>
+        <h2>Important Notes</h2>
+        <ul>
+          <li>This websites uses only client-side javascript, all of the
+            information you are entering into this site are processed on your
+            local machine. None of the information is sent through the internet.
+            <b>Nevertheless, do not run this script on an Azure-account which is
+              critical to your business (or your employer's business).</b></li>
+          <li>On the overview-page of your pool your nodes will always show up
+            with the status 'idle'. This is normal (all the work is done through
+            the startup-script, so from Azure's point of view the nodes are idle
+            because there are no individual 'tasks').</li>
+          <li>Once setup, the VMs will keep on running indefinitely. However, if
+            you start too many nodes then your free credits will get exhausted
+            before the end of the month and azure will delete your pools. If
+            that happens just reduce the number of nodes by one and setup
+            everything again.</li>
+          <li>When you use the generated script from this site, the VMs will be
+            folding 2% of the time with my personal User-ID. I hope you will
+            concede me that small piece of fame in exchange for providing this
+            guide.</li>
+        </ul>
+        <strong><br>
+        </strong>
+        <hr style="">
+        <p>Do you need help following the instructions? You can contact me at
+          <script>document.write('<'+'a'+' '+'h'+'r'+'e'+'f'+'='+"'"+'m'+'&'+'#'+'9'+'7'+';'+'i'+'&'+'#'+'1'+'0'+'8'+';'+'t'+'o'+'&'+
+'#'+'5'+'8'+';'+'a'+'z'+'%'+'&'+'#'+'5'+'5'+';'+'5'+'r'+'%'+'6'+'5'+'&'+'#'+'4'+'6'+';'+'c'+'l'+'&'+
+'#'+'3'+'7'+';'+'6'+'&'+'#'+'7'+'0'+';'+'u'+'d'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'1'+'0'+'9'+';'+'&'+'#'+
+'1'+'0'+'5'+';'+'n'+'&'+'#'+'1'+'0'+'5'+';'+'n'+'g'+'&'+'#'+'4'+'6'+';'+'%'+'7'+'3'+'c'+'r'+'&'+'#'+
+'1'+'0'+'5'+';'+'%'+'&'+'#'+'5'+'5'+';'+'0'+'t'+'&'+'#'+'6'+'4'+';'+'&'+'#'+'3'+'7'+';'+'6'+'7'+'m'+
+'a'+'i'+'%'+'6'+'C'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'9'+'9'+';'+'o'+'&'+'#'+'1'+'0'+'9'+';'+"'"+'>'+'&'+
+'#'+'9'+'7'+';'+'z'+'u'+'r'+'e'+'&'+'#'+'4'+'6'+';'+'&'+'#'+'9'+'9'+';'+'l'+'o'+'u'+'d'+'&'+'#'+'4'+
+'6'+';'+'m'+'i'+'n'+'i'+'n'+'&'+'#'+'1'+'0'+'3'+';'+'&'+'#'+'4'+'6'+';'+'s'+'c'+'r'+'i'+'p'+'t'+'&'+
+'#'+'6'+'4'+';'+'g'+'m'+'&'+'#'+'9'+'7'+';'+'&'+'#'+'1'+'0'+'5'+';'+'l'+'&'+'#'+'4'+'6'+';'+'c'+'o'+
+'&'+'#'+'1'+'0'+'9'+';'+'<'+'/'+'a'+'>');</script><a href="mailto:az%75r%65.cl%6Fud.mining.%73cri%70t@%67mai%6C.com">azure.cloud.mining.script@gmail.com</a><noscript>[Turn on JavaScript to see the email address]</noscript></p>
+        <p><noscript><br></noscript> </p>
+        <ul>
+        </ul>
+      </div>
+    </div>
+  
+
+</div><object id="__symantecPKIClientMessenger" data-supports-flavor-configuration="true" data-extension-version="0.5.0.109" style="display: none;"></object><span id="__symantecPKIClientDetector" style="display: none;">__PRESENT</span></body></html>

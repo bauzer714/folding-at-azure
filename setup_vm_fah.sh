@@ -4,12 +4,12 @@
 #expected environment variables:
 #USER -> the name of the storage account
 #smbshare -> The name of the share within the storage account
-#PASSWD -> Password/key for the storage account 
+#PASSWD -> Password/key for the storage account
 #fahteam -> team-id for folding@home
 #fahuser -> user-id for folding@home
 
-sudo apt-get -y update       
-sudo apt-get -y upgrade  
+sudo apt-get -y update
+sudo apt-get -y upgrade
 sudo apt -y install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev leafpad git xauth unzip mono-mcs
 
 wget https://download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.5/latest.tar.bz2
@@ -29,9 +29,9 @@ sudo mount -t cifs //$USER.file.core.windows.net/$smbshare /mnt/storage -o nofai
 
 rm /tmp/cred
 
-git clone https://github.com/azurecloudminingscript/folding-at-azure.git
+git clone https://github.com/bauzer714/folding-at-azure.git
 
-mono folding-at-azure/fahtcher.exe 
+mono folding-at-azure/fahtcher.exe
 
 
 
